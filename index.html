@@ -2,133 +2,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="I2IohMLE3ykRX3pvKaxB3t4UOZIJvK74GiMkJKADnSM" />
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="YousSec is the personal cybersecurity portfolio of Youssif Hossam, focused on penetration testing, network security, web security, and mobile security.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>YousSec | Youssif Hossam — Cybersecurity Portfolio</title>
+
+  <meta name="description" content="YousSec is the cybersecurity portfolio of Youssif Hossam from Egypt, focused on penetration testing, network security, web application security, Linux, Python, and Bash.">
+
   <meta name="author" content="Youssif Hossam">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0b1120">
-  <title>YousSec | Youssif Hossam - Cybersecurity</title>
+
+  <link rel="canonical" href="https://youssifhossam724-web.github.io/YousSec.github.io/">
+
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="I2IohMLE3ykRX3pvKaxB3t4UOZIJvK74GiMkJKADnSM">
+
+  <!-- Social sharing metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="YousSec | Youssif Hossam">
+  <meta property="og:description" content="Explore the cybersecurity portfolio, technical skills, labs, and projects of Youssif Hossam, known as YousSec.">
+  <meta property="og:url" content="https://youssifhossam724-web.github.io/YousSec.github.io/">
+  <meta property="og:site_name" content="YousSec">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Structured data: personal portfolio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Youssif Hossam",
+    "alternateName": "YousSec",
+    "url": "https://youssifhossam724-web.github.io/YousSec.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/youssif-hossam-14ab54405/",
+      "https://github.com/youssifhossam724-web"
+    ],
+    "jobTitle": "Aspiring Penetration Tester",
+    "description": "Cybersecurity enthusiast focused on penetration testing, network security, web application security, and mobile security.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Egypt"
+    },
+    "knowsAbout": [
+      "Cybersecurity",
+      "Penetration Testing",
+      "Network Security",
+      "Web Application Security",
+      "Mobile Application Security",
+      "Linux",
+      "Python",
+      "Bash",
+      "Computer Networking"
+    ]
+  }
+  </script>
+
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      color-scheme: dark;
+      --bg: #0b1120;
+      --panel: #111b2d;
+      --border: #263449;
+      --text: #e5edf7;
+      --muted: #a9b8cc;
+      --accent: #5eead4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
     body {
       margin: 0;
-      background: #0b1120;
-      color: #e5edf7;
-      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
-    a { color: #5eead4; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { width: min(920px, 90%); margin: auto; }
-    header { padding: 24px 0; border-bottom: 1px solid #263449; }
-    .brand { font-size: 1.5rem; font-weight: 800; color: #5eead4; }
-    .hero { padding: 85px 0 55px; }
-    .tag { color: #5eead4; letter-spacing: 2px; font-size: .85rem; }
-    h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.1; margin: 18px 0; }
-    h1 span { color: #5eead4; }
-    .intro { color: #a9b8cc; font-size: 1.1rem; max-width: 680px; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration: underline;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(920px, 90%);
+      margin-inline: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 82px 0 58px;
+    }
+
+    .tag {
+      color: var(--accent);
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      line-height: 1.1;
+      margin: 18px 0;
+      overflow-wrap: anywhere;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      color: var(--accent);
+      margin-top: 0;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 1.12rem;
+      max-width: 700px;
+    }
+
     .button {
-      display: inline-block; margin: 18px 10px 0 0; padding: 10px 18px;
-      border: 1px solid #5eead4; border-radius: 8px; font-weight: bold;
+      display: inline-block;
+      margin: 16px 10px 0 0;
+      padding: 10px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      font-weight: 700;
     }
-    section { padding: 35px 0; }
-    h2 { font-size: 1.7rem; margin-bottom: 12px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+
+    .button-primary {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-intro,
+    .muted {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+      gap: 16px;
+    }
+
     .card {
-      padding: 20px; border: 1px solid #263449; border-radius: 12px;
-      background: #111b2d;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--panel);
+      overflow-wrap: anywhere;
     }
-    .card h3 { margin-top: 0; color: #5eead4; }
-    .muted { color: #a9b8cc; }
-    footer { margin-top: 40px; padding: 25px 0; border-top: 1px solid #263449; color: #a9b8cc; }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .link-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 520px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <div class="container">
-      <a class="brand" href="#home">YousSec<span>.</span></a>
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="YousSec home">YousSec.</a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#focus">Focus</a>
+        <a href="#skills">Skills</a>
+        <a href="#practice">Practice</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero" id="home">
       <p class="tag">CYBERSECURITY PORTFOLIO</p>
+
       <h1>Hi, I'm <span>Youssif Hossam</span>.</h1>
-      <h2>Penetration Testing & Security</h2>
+
+      <h2>Penetration Testing &amp; Cybersecurity</h2>
+
       <p class="intro">
-        Building practical skills in network, web, and mobile penetration
-        testing. Exploring security through hands-on labs, technical projects,
-        Linux, Bash, and Python.
+        Welcome to YousSec, the personal cybersecurity portfolio of Youssif
+        Hossam from Egypt. Focused on penetration testing, network security,
+        web application security, and mobile security, with practical work
+        involving Linux, Python, Bash, and cybersecurity labs.
       </p>
-      <a class="button" href="https://www.linkedin.com/in/youssif-hossam-14ab54405/">LinkedIn</a>
-      <a class="button" href="https://github.com/youssifhossam724-web">GitHub</a>
+
+      <a class="button button-primary"
+         href="https://www.linkedin.com/in/youssif-hossam-14ab54405/"
+         target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+
+      <a class="button"
+         href="https://github.com/youssifhossam724-web"
+         target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+    </section>
+
+    <section id="about">
+      <h2>About YousSec</h2>
+      <p class="section-intro">
+        YousSec is the cybersecurity brand and portfolio of Youssif Hossam.
+        The goal is to document practical cybersecurity work, technical
+        projects, lab exercises, and continuous development in penetration
+        testing and security research.
+      </p>
     </section>
 
     <section id="focus">
       <h2>Areas of Focus</h2>
+
       <div class="grid">
         <article class="card">
           <h3>Network Security</h3>
-          <p class="muted">Network penetration testing, networking fundamentals, and CCNA knowledge.</p>
+          <p class="muted">
+            Network fundamentals, network penetration testing concepts,
+            traffic analysis, and network configuration labs.
+          </p>
         </article>
+
         <article class="card">
-          <h3>Web Security</h3>
-          <p class="muted">Learning to identify and understand web application vulnerabilities in authorized labs.</p>
+          <h3>Web Application Security</h3>
+          <p class="muted">
+            Web security testing, vulnerability analysis, and authorized
+            practice through web security labs.
+          </p>
         </article>
+
         <article class="card">
           <h3>Mobile Security</h3>
-          <p class="muted">Mobile application security and penetration testing concepts.</p>
+          <p class="muted">
+            Mobile application security concepts and practical security
+            testing in authorized environments.
+          </p>
         </article>
       </div>
     </section>
 
     <section id="skills">
       <h2>Technical Skills</h2>
+
       <div class="grid">
         <article class="card">
-          <h3>Operating System</h3>
-          <p class="muted">Linux</p>
+          <h3>Operating Systems</h3>
+          <p class="muted">Linux and command-line environments.</p>
         </article>
+
         <article class="card">
           <h3>Scripting</h3>
-          <p class="muted">Python and Bash</p>
+          <p class="muted">Python and Bash for scripting and automation.</p>
         </article>
+
         <article class="card">
           <h3>Networking</h3>
-          <p class="muted">Networking fundamentals and CCNA coursework knowledge.</p>
+          <p class="muted">
+            Networking fundamentals, network troubleshooting, and CCNA
+            coursework knowledge.
+          </p>
         </article>
       </div>
     </section>
 
     <section id="practice">
-      <h2>Practice & Learning</h2>
-      <p class="muted">
-        Developing practical experience through cybersecurity labs and
-        continuous learning.
+      <h2>Practice Platforms</h2>
+
+      <p class="section-intro">
+        Cybersecurity practice and hands-on learning through online labs,
+        challenges, and web security training resources.
       </p>
-      <p>
-        <a href="https://tryhackme.com/">TryHackMe</a> ·
-        <a href="https://www.hackthebox.com/">Hack The Box</a> ·
-        <a href="https://portswigger.net/web-security">PortSwigger Web Security Academy</a> ·
-        <a href="https://www.root-me.org/">Root-Me</a>
-      </p>
+
+      <div class="link-list">
+        <a href="https://tryhackme.com/"
+           target="_blank" rel="noopener noreferrer">TryHackMe</a>
+
+        <a href="https://www.hackthebox.com/"
+           target="_blank" rel="noopener noreferrer">Hack The Box</a>
+
+        <a href="https://portswigger.net/web-security"
+           target="_blank" rel="noopener noreferrer">PortSwigger Web Security Academy</a>
+
+        <a href="https://www.root-me.org/"
+           target="_blank" rel="noopener noreferrer">Root-Me</a>
+      </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Projects &amp; Technical Write-ups</h2>
+
       <div class="card">
+        <p>
+          This section is reserved for documented projects, scripts,
+          network configuration labs, and technical write-ups.
+        </p>
         <p class="muted">
-          Projects and technical write-ups will be published here as they
-          become ready. Check back for updates.
+          Project entries will be added as completed work is documented.
+          Only authorized testing and lab work should be published.
         </p>
       </div>
     </section>
 
     <section id="contact">
-      <h2>Connect</h2>
-      <p class="muted">Open to learning opportunities, collaboration, and cybersecurity internships.</p>
-      <a class="button" href="https://www.linkedin.com/in/youssif-hossam-14ab54405/">Contact me on LinkedIn</a>
+      <h2>Contact &amp; Professional Links</h2>
+
+      <p class="section-intro">
+        Open to cybersecurity internships, learning opportunities, and
+        professional collaboration.
+      </p>
+
+      <a class="button"
+         href="https://www.linkedin.com/in/youssif-hossam-14ab54405/"
+         target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+
+      <a class="button"
+         href="https://github.com/youssifhossam724-web"
+         target="_blank" rel="noopener noreferrer">Explore GitHub</a>
     </section>
   </main>
 
